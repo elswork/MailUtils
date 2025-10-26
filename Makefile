@@ -1,6 +1,6 @@
 SNAME ?= mailutils
 RNAME ?= elswork/$(SNAME)
-ONAME ?= deftwork/$(SNAME)
+ONAME ?= elswork/$(SNAME)
 VER ?= $(shell cat VERSION)
 BASE ?= latest
 BASENAME ?= debian:bullseye-slim
