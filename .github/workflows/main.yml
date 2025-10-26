@@ -15,6 +15,9 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     environment: elsworkEnvironment
     steps:
       -
