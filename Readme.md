@@ -55,23 +55,72 @@ make stop
 make rm
 ```
 
-#### ☕ ¿Quieres apoyar mi trabajo?
+## Shell Aliases and Functions
 
-**[¡Patrocíname!](https://github.com/sponsors/elswork) Juntos seremos imparables.**
+You can add the following aliases and functions to your `.bashrc`, `.zshrc` or similar shell configuration file to easily send emails from your command line.
 
-Otras formas de financiarme:
+**Note:** These examples assume your container is named `my-mail-sender` and your email is `your-email@example.com`. Remember to change them to match your configuration.
 
-[![GitHub Sponsors](https://img.shields.io/github/sponsors/elswork)](https://github.com/sponsors/elswork)
-[![Donar PayPal](https://img.shields.io/badge/Donar-PayPal-green.svg)](https://www.paypal.me/elswork)
+### Send command history (`mh`)
+
+This alias, named `mh` (for "mail history"), sends your shell's command history to your email.
+
+```sh
+alias mh="history | docker exec -i my-mail-sender mail -s \\"\$(whoami) \$(uname -nr) \$(awk -F= '\$1==\\"PRETTY_NAME\\" { print \$2 ;}' /etc/os-release)\\" your-email@example.com"
+```
+
+### Send command output (`mailme`)
+
+This shell function, named `mailme`, allows you to send the output of any command to your email.
+
+```bash
+mailme() {
+  if [ -z "$1" ]; then
+    echo "Usage: mailme <command>"
+    echo "Example: mailme ls -l"
+    return 1
+  fi
+
+  # The subject includes the command name ($1) for clarity
+  SUBJECT="Output of command: $1"
+  
+  "$@" | docker exec -i my-mail-sender mail -s "$SUBJECT" your-email@example.com
+}
+```
+
+**Usage examples:**
+
+```sh
+# Send the content of a file
+mailme cat /path/to/your/file.txt
+
+# Send the list of running processes
+mailme ps aux
+```
+
+## Funding and Donations
+
+**[Sponsor me!](https://github.com/sponsors/elswork) Together we will be unstoppable.**
+
+Other ways to fund me:
+
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/elswork)](https://github.com/sponsors/elswork) [![Donate PayPal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?business=LFKA5YRJAFYR6&no_recurring=0&item_name=Open+Source+Donation&currency_code=EUR) 
+---
+
+**Donate with Bitcoin (BTC):**
+
+`bc1qfxsxxcr2akh2l26m6am0vpwwkhnsua04lmgfef`
+
+[View on Blockchain.com](https://www.blockchain.com/btc/address/bc1qfxsxxcr2akh2l26m6am0vpwwkhnsua04lmgfef)
 
 ---
 
-**Donar con Bitcoin (BTC):**
-`bc1qfxsxxcr2akh2l26m6am0vpwwkhnsua04lmgfef`  
-[Ver en Blockchain.com](https://www.blockchain.com/btc/address/bc1qfxsxxcr2akh2l26m6am0vpwwkhnsua04lmgfef)
+**Donate with Ethereum (ETH):**
 
-**Donar con Ethereum (ETH):**
-`0x186b91982CbB6450Af5Ab6F32edf074dFCE8771c`  
-[Ver en Etherscan](https://etherscan.io/address/0x186b91982CbB6450Af5Ab6F32edf074dFCE8771c)
+`0x186b91982CbB6450Af5Ab6F32edf074dFCE8771c`
 
-*Ten en cuenta que las donaciones son voluntarias y no son reembolsables. ¡Gracias por tu generosidad!*
+[View on Etherscan](https://etherscan.io/address/0x186b91982CbB6450Af5Ab6F32edf074dFCE8771c)
+
+---
+
+*Please note that donations are voluntary and non-refundable. Thank you for your generosity!*
