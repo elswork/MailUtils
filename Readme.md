@@ -14,8 +14,8 @@ A [Docker](http://docker.com) file to build an image with `mailutils` and `ssmtp
 
 ## Compatible Architectures
 
-This image has been builded using [buildx](https://docs.docker.com/buildx/working-with-buildx/) for these architectures: 
-- amd64 arm64 ppc64le s390x 386 arm/v7 arm/v6
+This image has been built and tested using [buildx](https://docs.docker.com/buildx/working-with-buildx/) for these architectures: 
+- amd64 arm64 arm/v7
 
 ## Build Instructions
 
