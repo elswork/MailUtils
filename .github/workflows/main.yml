@@ -45,4 +45,4 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       -
         name: Make Buildx
-        run: make buildx
+        run: make buildx ONAME=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]') RNAME=${{ secrets.DOCKERHUB_USERNAME }}/mailutils
