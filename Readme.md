@@ -96,6 +96,9 @@ mailme cat /path/to/your/file.txt
 
 # Send the list of running processes
 mailme ps aux
+
+# Send a system report
+mailme ./system_report.sh
 ```
 
 ## Funding and Donations
