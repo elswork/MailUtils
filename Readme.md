@@ -66,7 +66,7 @@ You can add the following aliases and functions to your `.bashrc`, `.zshrc` or s
 This alias, named `mh` (for "mail history"), sends your shell's command history to your email.
 
 ```sh
-alias mh="history | docker exec -i my-mail-sender mail -s \\"\$(whoami) \$(uname -nr) \$(awk -F= '\$1==\\"PRETTY_NAME\\" { print \$2 ;}' /etc/os-release)\\" your-email@example.com"
+alias mh="history | docker exec -i my-mail-sender mail -s \"\$(whoami) \$(uname -nr) \$(awk -F= '\$1==\"PRETTY_NAME\" { print \$2 ;}' /etc/os-release)\" your-email@example.com"
 ```
 
 ### Send command output (`mailme`)
