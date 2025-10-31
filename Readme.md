@@ -6,11 +6,11 @@ A [Docker](http://docker.com) file to build an image with `mailutils` and `ssmtp
 
 | Website | GitHub | Docker Hub |
 | --- | --- | --- |
-| [Deft.Work my personal blog](https://deft.work) | [MailUtils](https://github.com/elswork/MailUtils) | [MailUtils](https://hub.docker.com/r/elswork/MailUtils) |
+| [Deft.Work my personal blog](https://deft.work) | [MailUtils](https://github.com/elswork/MailUtils) | [mailutils](https://hub.docker.com/r/elswork/mailutils) |
 
 | Docker Pulls | Docker Stars | Size | Sponsors |
 | --- | --- | --- | --- |
-| [![Docker pulls](https://img.shields.io/docker/pulls/elswork/MailUtils.svg)](https://hub.docker.com/r/elswork/MailUtils "MailUtils on Docker Hub") | [![Docker stars](https://img.shields.io/docker/stars/elswork/MailUtils.svg)](https://hub.docker.com/r/elswork/MailUtils "MailUtils on Docker Hub") | [![Docker Image size](https://img.shields.io/docker/image-size/elswork/MailUtils)](https://hub.docker.com/r/elswork/MailUtils "MailUtils on Docker Hub") | [![GitHub Sponsors](https://img.shields.io/github/sponsors/elswork)](https://github.com/sponsors/elswork "Sponsor me!") |
+| [![Docker pulls](https://img.shields.io/docker/pulls/elswork/mailutils.svg)](https://hub.docker.com/r/elswork/mailutils "mailutils on Docker Hub") | [![Docker stars](https://img.shields.io/docker/stars/elswork/mailutils.svg)](https://hub.docker.com/r/elswork/mailutils "mailutils on Docker Hub") | [![Docker Image size](https://img.shields.io/docker/image-size/elswork/mailutils)](https://hub.docker.com/r/elswork/mailutils "mailutils on Docker Hub") | [![GitHub Sponsors](https://img.shields.io/github/sponsors/elswork)](https://github.com/sponsors/elswork "Sponsor me!") |
 
 ## Compatible Architectures
 
