@@ -59,6 +59,9 @@ buildx: ## Buildx the container
 run: ## Running Docker container
 	docker run -d --name $(CONTAINER_NAME) -v "$(PWD)/ssmtp.conf:/etc/ssmtp/ssmtp.conf:ro" $(RNAME):$(MODE)
 
+start: ## Start Docker container
+	docker start $(CONTAINER_NAME)
+
 stop: ## Stopping Docker container
 	docker stop $(CONTAINER_NAME)
 
