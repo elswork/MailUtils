@@ -99,6 +99,12 @@ mailme ps aux
 
 # Send a system report
 mailme ./system_report.sh
+
+# Send a list of local network devices
+mailme sudo arp-scan --interface=eth0 --localnet
+
+# Send a hardware report in json format
+mailme sudo lshw -json
 ```
 
 ## Funding and Donations
