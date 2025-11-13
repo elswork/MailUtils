@@ -1,7 +1,7 @@
 root=elswork@gmail.com
 mailhub=smtp.gmail.com:587
 hostname=docker
-AuthUser=elswork@gmail.com
+AuthUser=usuario@example.com
 AuthPass=your_app_password_here
 UseTLS=YES
 UseSTARTTLS=YES
