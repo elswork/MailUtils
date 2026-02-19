@@ -5,7 +5,7 @@ ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION
 
-LABEL mantainer="Eloy Lopez <elswork@gmail.com>" \
+LABEL maintainer="Eloy Lopez <elswork@gmail.com>" \
     org.opencontainers.image.title=MailUtils \
     org.opencontainers.image.description="A Docker image with mailutils and ssmtp to send emails." \
     org.opencontainers.image.vendor=Deft.Work \
